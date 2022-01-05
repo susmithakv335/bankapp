@@ -1,0 +1,53 @@
+<div class="container3 " style="background-color: rgb(230, 226, 45);">
+    <nav class="navbar  text-dark" style="background-color: #0c9cc0;">
+       
+   <h5 >SFC Bank pvt ltd</h5>
+   <!-- <span class="quote text-light text-center"Giving you Freedom></span> -->
+    </nav>
+    <!-- <p>{{aim}}</p> -->
+ 
+    <h2 class="text-center"><u>Sign Up</u></h2>
+    <form [formGroup]="registerForm" (ngSubmit)="register()">
+    <div class="row">
+       
+        <div class="col-3"></div>
+        <div class="col-6">
+           
+            <div class="mb-3 mt-3">
+                <h5>UserName:</h5>
+             
+           <input type="text" name="uname" formControlName="uname"  id="uname" placeholder="UserName"  class="form-control" required="">
+           <!-- (change)="acnoChange($event)" -->
+        </div>
+    <div  *ngIf="(this.registerForm.get('uname')?.touched||this.registerForm.get('uname')?.dirty)&&this.registerForm.get('uname')?.errors"  class="error"> Invalid Username</div>
+        <div class="mb-3 mt-3">
+            <h5>Account number:</h5>
+         
+       <input type="text" name="acno" formControlName="acno"  id="bk_username" placeholder="Account Number please"  class="form-control" required="">
+       <!-- (change)="acnoChange($event)" -->
+    </div>
+    <div  *ngIf="(this.registerForm.get('acno')?.touched||this.registerForm.get('acno')?.dirty)&&this.registerForm.get('acno')?.errors"  class="error"> Invalid Account Number</div>
+
+        <div class="mb-3">
+            <h5>Password:</h5>
+            <input type="password" name="pswd" id="bk_password" formControlName="pswd"  placeholder="enter password  " class="form-control" required>
+            <!-- (change)="pswdChange($event)" -->
+        </div>
+        <div  *ngIf="(this.registerForm.get('pswd')?.touched||this.registerForm.get('pswd')?.dirty)&&this.registerForm.get('pswd')?.errors"  class="error"> Invalid Password</div>
+
+        <div class="mb-3">
+           
+            <!-- <button class="btn btn-primary"  >Register</button>  -->
+            <input type="submit" name="login" value="Register"  class="btn btn-primary"   required>
+
+            <!-- //onclick="bank.login()" -->
+        </div>
+    </div>
+<p style="text-align: center;">Already existing User??<a routerLink="">Log In</a></p>
+    <div class="col-3"></div>
+    </div>
+</form>
+</div>
+
+
+

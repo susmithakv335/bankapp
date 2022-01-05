@@ -1,4 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 .container{
-    background-color: rgb(82, 240, 252);
+    background-color: rgb(61, 253, 237);
+    width: 500px;
+    height: 450px;
+    align-content: center;
+}
+.container1{
+    background-color: rgb(56, 245, 235);
+    width: 500px;
+    height: 370px;
+    /* align-content: center; */
+    margin-left: 425px;
+}
+.container3{
+    height: 500px;
 }
