@@ -8,13 +8,13 @@ import { DataService } from '../services/data.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  // acno=""
-  // pswd=""
-  // amount=""
+  acno=""
+  pswd=""
+  amount=""
 
-  // pswd1=""
-  // acno1=""
-  // amount1=""
+  pswd1=""
+  acno1=""
+  amount1=""
 
   depositForm=this.fb.group({
     acno:['',[Validators.required,Validators.pattern('[0-9]*')]],
@@ -52,9 +52,9 @@ else{
 }
 }
 withdraw(){
-  var acno=this.depositForm.value.acno1
-  var pswd=this.depositForm.value.pswd1
-  var amount=this.depositForm.value.amount1
+  var acno=this.withdrawForm.value.acno1
+  var pswd=this.withdrawForm.value.pswd1
+  var amount=this.withdrawForm.value.amount1
   if(this.withdrawForm.valid){
     let result= this.ds.withdraw(acno,pswd,amount)
     if(result){

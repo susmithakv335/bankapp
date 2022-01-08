@@ -6,11 +6,11 @@
     align-content: center;
 }
 .container1{
-    background-color: rgb(56, 245, 235);
-    width: 500px;
-    height: 370px;
+    /* background-color: rgb(56, 245, 235); */
+   width: 500px;
+    height: 370px; 
     /* align-content: center; */
-    margin-left: 425px;
+    margin-left: 425px; 
 }
 .container3{
     height: 500px;

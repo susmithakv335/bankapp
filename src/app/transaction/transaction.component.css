@@ -1,0 +1,21 @@
+table{
+    color: black;
+    margin-top: 50px;
+    border: blue;
+    /* border: 1px solid black; */
+    border-style:  solid;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+  
+  th {
+    height: 70px;
+        border: 1px solid black;
+
+  }
+  td{
+    border: 1px solid black;
+
+  }

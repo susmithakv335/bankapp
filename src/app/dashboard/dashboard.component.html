@@ -1,11 +1,14 @@
-<div class="container">
+<div class="containera1">
+             <div class="aa">
+
     <nav class="navbar  text-dark" style="background-color: #0c9cc0;">
        
         <h5 >SFC Bank pvt ltd</h5>
-        <h3 style="color: rgb(2, 0, 0);">welcome {{user}}</h3>
          </nav>
-     
+         <h3 style="color: rgb(2, 0, 0);">welcome {{user}}</h3>
+<a routerLink="/transaction" style="color: crimson;">transaction history</a>
     <h2 class="text-center"><u>Deposit Form</u></h2>
+
     <form [formGroup]="depositForm" (ngSubmit)="deposit()">
 
     <div class="row">
@@ -36,7 +39,7 @@
         <div  *ngIf="(this.depositForm.get('amount')?.touched||this.depositForm.get('amount')?.dirty)&&this.depositForm.get('amount')?.errors"  class="error"> Invalid amount</div>
 
         <div class="mb-3">
-            <input type="submit" name="deposit" value="deposit"  class="btn btn-primary" (click)="deposit()" required>
+            <input type="submit" name="deposit" value="deposit"  class="btn btn-primary"  required>
 
             <!-- <button class="btn btn-primary" (click)="deposit()"  >deposit</button>            -->
         </div> 
@@ -45,9 +48,12 @@
     </div>
     </form>
 </div>
+</div>
+
 <!-- depoit form -->
 
-<div class="container1 mt-4 ">
+<div class="containera2 mt-4 ">
+    <div>
     <h2 class="text-center"><u>Withdraw Form</u></h2>
     <form [formGroup]="withdrawForm" (ngSubmit)="withdraw()">
 
@@ -74,7 +80,7 @@
 
         <div class="mb-3">
             <h5>Amount</h5>
-            <input type="text" name="amnt" id="bk_amount1" formControlName="amount"  placeholder="enter Amount  " class="form-control" required>
+            <input type="text" name="amnt" id="amount1" formControlName="amount"  placeholder="enter Amount " class="form-control" required>
           
         </div>
         <div style="color: black;"  *ngIf="(this.withdrawForm.get('amount')?.touched||this.withdrawForm.get('amount')?.dirty)&&this.withdrawForm.get('amount')?.errors"  class="error"> Invalid amount</div>
@@ -85,11 +91,13 @@
             <!-- <button class="btn btn-primary" (click)="withdraw()"  >Withdraw</button>            -->
         </div> 
     </div>
+
     <div class="col-3"></div>
     </div>
+</form>
+</div>
 
-<!-- </div> -->
-<!-- depoit form -->
+<!-- withdraw form -->
 
 
 
